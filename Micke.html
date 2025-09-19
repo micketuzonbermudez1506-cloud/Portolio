@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Micke | Home</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc;
+      color: #1a202c;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #26648E;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #FFE3B3;
+    }
+    nav { display: flex; gap: 1rem; }
+    nav a {
+      color: #ffffff;
+      font-weight: 500;
+      padding: 0.5rem 0.9rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover { background: #4FBFDC; }
+    nav a.active {
+      background: #53D2DC;
+      color: #1a202c;
+      font-weight: 600;
+    }
+    .section {
+      padding: 4rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      color: #26648E;
+      border-left: 5px solid #53D2DC;
+      padding-left: 0.6rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #26648E;
+      color: #FFE3B3;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Micke Tuzon</h1>
+    <nav>
+      <a href="{{ url_for('home') }}" class="active">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('myportfolio') }}">Portfolio</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h2>Welcome</h2>
+    <p>Hello! Welcome to my portfolio website. Explore my work, skills, and projects below.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 | Micke Tuzon | BSIT-2B
+  </footer>
+</body>
+</html>
